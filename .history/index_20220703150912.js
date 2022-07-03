@@ -1,7 +1,5 @@
 let randomNumber1 = Math.floor(Math.random()*6)+1; // get a random number between 1-6
-let randomNumber2 = Math.floor(Math.random()*6)+1;
 
-// Teacher's solution!
 let randomImage = "dice" + randomNumber1 + ".png"; // random images dice1.png-dice6.png
 
 let randomImageSource = "images/" + randomImage; // images/dice1.png - images/dice6.png (because it's inside images folder)
@@ -10,22 +8,23 @@ let image1 = document.querySelectorAll("img")[0]; // select all img tag, because
 
 image1.setAttribute("src", randomImageSource); // setAttribute method
 
+
+let randomNumber2 = Math.floor(Math.random()*6)+1;
+
 let randomImage2 = "dice" + randomNumber2 + ".png";
 
 let randomImageSource2 = "images/" + randomImage2;
 
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+document.querySelectorAll("img")[1].setAttribute("src", randomImage2);
 
 if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = "Player 1 Wins!"; // we only have one h1 tag, so using querySelector
+    document.querySelector("h1").innerHTML = "Player 1 Wins!";
 } else if (randomNumber1 < randomNumber2) {
     document.querySelector("h1").innerHTML = "Player 2 Wins!";
 } else {
     document.querySelector("h1").innerHTML = "Draw!";
 }
 
-
-// My very basic solution!
 // window.addEventListener("load",function(){
 //     e1();
 //     e2();
